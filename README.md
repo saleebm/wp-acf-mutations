@@ -2,15 +2,15 @@
 
 This is an example child theme for TwentyTwenty displaying how to mutate a profile field from the user in WordPress.
 
-It works off the core functionality implemented in WP-GraphQL. In addition, it adds a couple profile fields to the user profile for SEO, therefore it relies on the WP GraphQL Yoast extension.
+It works off the core functionality implemented in WPGraphQL. In addition, it adds a couple profile fields to the user profile for SEO, therefore it relies on the WP GraphQL Yoast extension.
 
 ## Requirements
 
 1. WordPress
 
-2. [WP GraphQL](https://github.com/wp-graphql/wp-graphql)
+2. [WPGraphQL](https://github.com/wp-graphql/wp-graphql)
 
-3. [WP Graphql Yoast](https://github.com/ashhitch/wp-graphql-yoast-seo)
+3. [WPGraphQL Yoast](https://github.com/ashhitch/wp-graphql-yoast-seo)
 
 4. Frontend to run the mutations.
 
