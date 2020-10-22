@@ -53,27 +53,15 @@ typical input:
 
 ```graphql
 # the mutation
-mutation UPDATE_USER_SOCIAL_LINKS ($input: UpdateUserInput!){
-  updateUser(input:$input) {
+mutation UPDATE_USER_SOCIAL_LINKS($input: UpdateUserInput!) {
+  updateUser(input: $input) {
     clientMutationId
     user {
-      socialLinks{
+      personalLinks {
         github
-        linkedIn
-        twitter
       }
-    }
-    
-  }
-}
-
-# the result for users
-query RESULT {
-  users{
-    edges{
-      node{
-        socialLinks{
-          github
+      seo {
+        social {
           twitter
           linkedIn
         }
@@ -81,4 +69,24 @@ query RESULT {
     }
   }
 }
+
+# the result for users
+query RESULT {
+  users {
+    edges {
+      node {
+        personalLinks {
+          github
+        }
+        seo {
+          social {
+            twitter
+            linkedIn
+          }
+        }
+      }
+    }
+  }
+}
+
 ```
