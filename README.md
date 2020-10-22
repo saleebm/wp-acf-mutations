@@ -8,7 +8,7 @@ An ACF field can also be obtained if set inside resolve function response field 
 
 ## Requirements
 
-1. WordPress
+1. WordPress with TwentyTwenty theme installed and the following plugins listed
 
 2. [WPGraphQL](https://github.com/wp-graphql/wp-graphql)
 
@@ -28,9 +28,17 @@ It hooks into the existing fields on the user profile:
 
 3. Twitter username (without the @)
 
-## Current conflicts
+## ACF field update
 
-1. Fields do not show up when added with ACF because user profile fields contain sensitive data.
+It also updates a field created through ACF programmatically. This field gets created when the theme activates.
+
+The field ID can be obtained either from the key assigned to the field or through the export function if working on the ACF gui.
+
+![field key name found in export of ACF group](./field-name-acf.png)
+
+## Current conflicts for ACF User fields
+
+1. Fields added to user may not show up when added with ACF because user profile fields contain sensitive data. It requires the configuration with ACF to configure what role may view profile fields.
 
     - resolution:
     
