@@ -1,8 +1,10 @@
-# WP ACF mutation child theme
+# WP GraphQL mutation child theme
 
 This is an example child theme for TwentyTwenty displaying how to mutate a profile field from the user in WordPress.
 
 It works off the core functionality implemented in WPGraphQL. In addition, it adds a couple profile fields to the user profile for SEO, therefore it relies on the WP GraphQL Yoast extension.
+
+An ACF field can also be obtained if set inside resolve function response field for the custom field. This uses a custom field that is not registered through ACF, but can be added through ACF and likewise obtained programmatically in the resolver.
 
 ## Requirements
 

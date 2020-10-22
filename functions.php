@@ -14,11 +14,11 @@ add_action( 'graphql_init', static function () {
 		]
 	] );
 
+	// add the resolve function to the User
 	register_graphql_field( 'User', 'personalLinks', [
 		'type'        => 'UserSocial',
 		'description' => __( 'The social links on the user.', 'copt-dev' ),
 		'resolve'     => function ( User $user, array $args, AppContext $context ) {
-			graphql_debug( $user );
 			$github   = get_user_meta( $user->userId, 'github', true );
 
 			return array(
