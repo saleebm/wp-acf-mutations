@@ -48,6 +48,8 @@ The field ID can be obtained either from the key assigned to the field or throug
 
 ## Mutation
 
+### Regular custom fields added through user meta
+
 typical input:
 ```json
 {
@@ -94,6 +96,39 @@ query RESULT {
             linkedIn
           }
         }
+      }
+    }
+  }
+}
+
+```
+
+### ACF field mutations
+
+Input for the mutation
+```json
+{
+  "input": {
+    "clientMutationId": "test1324",
+    "id": "cG9zdDoyNjYz",
+    "title": "example1",
+    "example": "test"
+  }
+}
+```
+
+The mutation to update the ACF field
+```graphql
+# update post
+mutation UPDATE_POST($input: UpdatePostInput!) {
+  updatePost(input: $input) {
+    clientMutationId
+    post {
+      id
+      title
+      example {
+        example
+        fieldGroupName
       }
     }
   }
