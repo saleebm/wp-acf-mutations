@@ -14,6 +14,8 @@ An ACF field can also be obtained if set inside resolve function response field 
 
 3. [WPGraphQL Yoast](https://github.com/ashhitch/wp-graphql-yoast-seo)
 
+4. [WPGraphQL ACF and ACF](https://github.com/wp-graphql/wp-graphql-acf)
+
 4. Frontend to run the mutations.
 
 ## function
