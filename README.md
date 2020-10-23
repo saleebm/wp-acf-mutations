@@ -6,6 +6,8 @@ It works off the core functionality implemented in WPGraphQL. In addition, it ad
 
 An ACF field can also be obtained if set inside resolve function response field for the custom field. This uses a custom field that is not registered through ACF, but can be added through ACF and likewise obtained programmatically in the resolver.
 
+As of now, this only allows the mutations for updating, not creating posts or users. To add to the creation mutation, or for any mutation really, find the type name of the mutation input, and place that in the conditional check for the type name on [line 90](https://github.com/saleebm/wp-acf-mutations/blob/227b8dc95b3ccd247ad3a0f2f519b4ab7a97abe6/functions.php#L90) or 100 of the functions file: `$type_name === 'UpdateUserInput'`. In this case, it is UpdateUserInput, but you can typically find that type name by looking through the docs of WPGraphQL.
+
 ## Requirements
 
 1. WordPress with TwentyTwenty theme installed and the following plugins listed
